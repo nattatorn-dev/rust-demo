@@ -21,5 +21,4 @@ fn main() {
     let number4 = vec![5, 6, 7, 8, 9];
     let result2 = vector::merge(number3, number4);
     println!("{:?}", result2);
-
 }

@@ -1,24 +1,34 @@
 // into_iter - This consumes the collection so that on each iteration the exact data is provided. Once the collection has been consumed it is no longer available for reuse as it has been 'moved' within the loop.
 pub fn push(vector1: Vec<i32>, vector2: Vec<i32>) -> Vec<i32> {
-  let mut temp: Vec<i32> = Vec::new();
+    let mut temp: Vec<i32> = Vec::new();
 
-  for num in vector1.into_iter() {
-    temp.push(num);
-  }
+    for num in vector1.into_iter() {
+        temp.push(num);
+    }
 
-  for num in vector2.into_iter() {
-    temp.push(num);
-  }
+    for num in vector2.into_iter() {
+        temp.push(num);
+    }
 
-  return temp;
+    return temp;
+}
+
+#[test]
+fn test_push() {
+    assert_eq!(merge(vec![1], vec![2, 3]), vec![1, 2, 3]);
 }
 
 pub fn merge(vector1: Vec<i32>, vector2: Vec<i32>) -> Vec<i32> {
-  let mut temp: Vec<i32> = vector1.clone();
+    let mut temp: Vec<i32> = vector1.clone();
 
-  for num in vector2.into_iter() {
-    temp.push(num);
-  }
+    for num in vector2.into_iter() {
+        temp.push(num);
+    }
 
-  return temp;
+    return temp;
+}
+
+#[test]
+fn test_merge() {
+    assert_eq!(merge(vec![1], vec![2, 3]), vec![1, 2, 3]);
 }
