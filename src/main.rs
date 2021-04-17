@@ -1,6 +1,7 @@
 mod number;
+mod schools;
 mod string;
-mod user;
+mod users;
 mod vector;
 
 fn main() {
@@ -23,7 +24,7 @@ fn main() {
     let result2 = vector::merge(number3, number4);
     println!("{:?}", result2);
 
-    let user1 = user::User {
+    let user1 = users::User {
         email: String::from("someone@example.com"),
         username: String::from("someusername123"),
         active: true,
@@ -31,12 +32,20 @@ fn main() {
     };
     println!("{:?}", user1);
 
-    let user2 = user::build_user(String::from("admin@admin.com"), String::from("admin"));
+    let user2 = users::build_user(String::from("admin@admin.com"), String::from("admin"));
     println!("{:?}", user2);
 
-    let books = user::Book::created();
+    let books = users::Book::created();
     books.add(1);
     books.add(4);
     books.add(99);
     books.print();
+
+    let schools = schools::School::created();
+    let john = schools::Student {
+        first_name: String::from("john"),
+        last_name: String::from("legend"),
+    };
+    schools.add(john);
+    schools.print();
 }
