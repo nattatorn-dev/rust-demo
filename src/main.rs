@@ -1,3 +1,11 @@
+mod number;
+mod string;
+
 fn main() {
-    println!("Hello, world!");
+    string::string();
+
+    number::number();
+    let num = number::add(12, 10);
+
+    println!("{}", num);
 }
