@@ -49,7 +49,6 @@ pub struct School {
     student: RefCell<Vec<Student>>,
 }
 
-
 impl School {
     pub fn created() -> School {
         School {

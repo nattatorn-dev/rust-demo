@@ -1,9 +1,11 @@
+mod conditionals;
+mod loops;
 mod numbers;
-mod structs;
 mod strings;
+mod structs;
+mod traits;
 mod tuples;
 mod vectors;
-mod traits;
 
 fn main() {
     // string
@@ -16,6 +18,9 @@ fn main() {
 
     // tuple
     tuples::demo();
+
+    // loop
+    loops::demo();
 
     // vector
     let number1 = vec![1, 2, 3, 4, 5];
@@ -53,6 +58,6 @@ fn main() {
     schools.add(john);
     schools.print();
 
-
     traits::demo();
+    conditionals::demo();
 }
