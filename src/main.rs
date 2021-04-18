@@ -1,30 +1,34 @@
-mod number;
-mod schools;
-mod string;
-mod users;
-mod vector;
+mod numbers;
+mod structs;
+mod strings;
+mod tuples;
+mod vectors;
+mod traits;
 
 fn main() {
     // string
-    string::string();
+    strings::demo();
 
     // number
-    number::number();
-    let num = number::add(12, 10);
+    numbers::demo();
+    let num = numbers::add(12, 10);
     println!("{}", num);
+
+    // tuple
+    tuples::demo();
 
     // vector
     let number1 = vec![1, 2, 3, 4, 5];
     let number2 = vec![5, 6, 7, 8, 9];
-    let result1 = vector::push(number1, number2);
+    let result1 = vectors::push(number1, number2);
     println!("{:?}", result1);
 
     let number3 = vec![1, 2, 3, 4, 5];
     let number4 = vec![5, 6, 7, 8, 9];
-    let result2 = vector::merge(number3, number4);
+    let result2 = vectors::merge(number3, number4);
     println!("{:?}", result2);
 
-    let user1 = users::User {
+    let user1 = structs::User {
         email: String::from("someone@example.com"),
         username: String::from("someusername123"),
         active: true,
@@ -32,20 +36,23 @@ fn main() {
     };
     println!("{:?}", user1);
 
-    let user2 = users::build_user(String::from("admin@admin.com"), String::from("admin"));
+    let user2 = structs::build_user(String::from("admin@admin.com"), String::from("admin"));
     println!("{:?}", user2);
 
-    let books = users::Book::created();
+    let books = structs::Book::created();
     books.add(1);
     books.add(4);
     books.add(99);
     books.print();
 
-    let schools = schools::School::created();
-    let john = schools::Student {
+    let schools = structs::School::created();
+    let john = structs::Student {
         first_name: String::from("john"),
         last_name: String::from("legend"),
     };
     schools.add(john);
     schools.print();
+
+
+    traits::demo();
 }
