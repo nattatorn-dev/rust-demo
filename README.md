@@ -24,6 +24,7 @@ $ cargo build
 ## Run
 
 ```bash
+$ cargo run --example array
 $ cargo run --example conditional
 $ cargo run --example controlflow
 $ cargo run --example number
@@ -37,7 +38,7 @@ $ cargo run --example vector
 ## Test
 
 ```bash
-$ cargo test
+$ cargo test --example array
 ```
 
 ## Code Formatting

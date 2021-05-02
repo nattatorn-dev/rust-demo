@@ -1,12 +1,21 @@
 use std::mem;
 
 fn get_first(slice: &[i32]) -> i32 {
-  return slice[0];
+    return slice[0];
 }
 
 #[test]
 fn test_get_first() {
-  assert_eq!(get_first([1,100,99]), 1);
+    assert_eq!(get_first(&[1, 100, 99]), 1);
+}
+
+fn accumulator(slice: &[i32]) -> i32 {
+    return slice.iter().map(|&v| v + v).sum();
+}
+
+#[test]
+fn test_accumulator() {
+    assert_eq!(accumulator(&[10, 1000]), 2020);
 }
 
 fn main() {
@@ -22,7 +31,11 @@ fn main() {
     println!("first {}", first);
 
     println!("borrow a section of the array as a slice");
-    let borrowed = &arr5000[1 .. 4];
+    let borrowed = &arr5000[1..4];
     println!("array occupies {} bytes", mem::size_of_val(borrowed));
     println!("{:?}", borrowed);
+
+    let arr: [i32; 5] = [1, 2, 3, 4, 5];
+    let acc = accumulator(&arr); // 2 + 4 + 6 + 8 + 10
+    println!("{}", acc);
 }
