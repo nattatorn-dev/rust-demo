@@ -5,4 +5,5 @@ fn main() {
     let (_x, y, _z) = tup;
 
     println!("The value of y is: {}", y);
+    println!("get first value: {}", tup.0);
 }

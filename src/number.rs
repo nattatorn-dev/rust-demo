@@ -1,4 +1,3 @@
-
 fn add(number1: i32, number2: i32) -> i32 {
     return number1 + number2;
 }
@@ -21,5 +20,4 @@ fn main() {
     let str = "123";
     let num: i32 = str.parse().unwrap(); // 📌 Note: The use of .unwrap() is to “catch” the potential error and fail at this point.
     println!("{}", num);
-
 }

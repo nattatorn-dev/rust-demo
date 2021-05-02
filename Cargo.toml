@@ -9,6 +9,10 @@ edition = "2018"
 [dependencies]
 
 [[example]]
+name = "array"
+path = "./src/array.rs"
+
+[[example]]
 name = "conditional"
 path = "./src/conditional.rs"
 
