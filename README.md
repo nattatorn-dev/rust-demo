@@ -22,7 +22,14 @@ $ cargo build
 ## Run
 
 ```bash
-$ cargo run
+$ cargo run --example conditional
+$ cargo run --example controlflow
+$ cargo run --example number
+$ cargo run --example string
+$ cargo run --example struct
+$ cargo run --example trait
+$ cargo run --example tuple
+$ cargo run --example vector
 ```
 
 ## Test

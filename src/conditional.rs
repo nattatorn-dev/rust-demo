@@ -1,4 +1,4 @@
-pub fn demo() {
+fn main() {
     let x = 13;
     let evenodd = if x % 2 == 0 { "even" } else { "odd" };
     println!("{}", evenodd);

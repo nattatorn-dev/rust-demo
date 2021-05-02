@@ -14,7 +14,7 @@ impl Show for f64 {
     }
 }
 
-pub fn demo() {
+fn main() {
     let answer = 42;
     let maybe_pi = 3.14;
     let v: Vec<&dyn Show> = vec![&answer, &maybe_pi]; // The dyn Trait feature is the new syntax for using trait objects. In short:
