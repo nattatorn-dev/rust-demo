@@ -27,6 +27,7 @@ $ cargo build
 $ cargo run --example array
 $ cargo run --example conditional
 $ cargo run --example controlflow
+$ cargo run --example enum
 $ cargo run --example number
 $ cargo run --example string
 $ cargo run --example struct
