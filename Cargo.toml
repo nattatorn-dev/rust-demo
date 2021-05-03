@@ -21,6 +21,10 @@ name = "controlflow"
 path = "./src/controlflow.rs"
 
 [[example]]
+name = "enum"
+path = "./src/enum.rs"
+
+[[example]]
 name = "number"
 path = "./src/number.rs"
 
