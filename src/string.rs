@@ -3,7 +3,7 @@ fn greeting(name: String) -> String {
 }
 
 #[test]
-fn test_greet() {
+fn test_greeting() {
     assert_eq!(greeting("John".to_string()), "Hello, John")
 }
 
