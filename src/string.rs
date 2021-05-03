@@ -1,3 +1,12 @@
+fn greeting(name: String) -> String {
+    return "Hello, ".to_string() + &name;
+}
+
+#[test]
+fn test_greet() {
+    assert_eq!(greeting("John".to_string()), "Hello, John")
+}
+
 fn main() {
     println!("Hello, world!");
 
@@ -9,4 +18,6 @@ fn main() {
     let spaces = "   ";
     let spaces = spaces.len();
     println!("{}", spaces);
+
+    println!("{}", greeting("John".to_string()));
 }
