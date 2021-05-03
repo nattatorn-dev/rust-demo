@@ -29,6 +29,10 @@ name = "number"
 path = "./src/number.rs"
 
 [[example]]
+name = "option"
+path = "./src/option.rs"
+
+[[example]]
 name = "string"
 path = "./src/string.rs"
 

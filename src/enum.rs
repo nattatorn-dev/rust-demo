@@ -1,6 +1,5 @@
 use std::fmt;
 
-
 #[allow(dead_code)]
 #[derive(Debug)]
 enum Status {
@@ -80,15 +79,15 @@ impl Keys {
 #[allow(dead_code)]
 #[derive(Debug)]
 enum Shape {
-    Rectangle { width: u32, height: u32},
+    Rectangle { width: u32, height: u32 },
     Square(u32),
-    Circle(f64)
+    Circle(f64),
 }
 
 impl Shape {
     fn area(&self) -> f64 {
         match *self {
-            Shape::Rectangle { width, height} => (width * height) as f64,
+            Shape::Rectangle { width, height } => (width * height) as f64,
             Shape::Square(ref s) => (s * s) as f64,
             Shape::Circle(ref r) => 3.14 * (r * r),
         }
@@ -116,8 +115,10 @@ fn main() {
     let key = up_direction.destruct();
     println!("{:?}", key);
 
-
-    let rectangle = Shape::Rectangle{width: 10, height: 70};
+    let rectangle = Shape::Rectangle {
+        width: 10,
+        height: 70,
+    };
     let square = Shape::Square(10);
     let circle = Shape::Circle(4.5);
 
