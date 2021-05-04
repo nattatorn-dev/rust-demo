@@ -22,7 +22,7 @@ fn main() {
     try_division(4, 2);
     try_division(1, 0);
 
-    let age: Option<u16> = None;
+    let age: Option<u8> = None;
     
     match age {
         Some(age) => {
