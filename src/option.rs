@@ -21,4 +21,17 @@ fn try_division(dividend: i32, divisor: i32) {
 fn main() {
     try_division(4, 2);
     try_division(1, 0);
+
+    let age: Option<u16> = None;
+    
+    match age {
+        Some(age) => {
+            if age >= 21 {
+                println!("can have beer");
+            } else {
+                println!("can not have beer, only {}", age);
+            }
+        },
+        None => println!("unknown age")
+    }
 }
